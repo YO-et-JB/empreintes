@@ -1,4 +1,4 @@
-import { useCallback, useState, useEffect } from "react"
+import { useState } from "react"
 import FormError from "@/web/components/FormError.jsx"
 import FormField from "@/web/components/FormField.jsx"
 import * as yup from "yup"
@@ -9,7 +9,6 @@ import Link from "@/web/components/Link.jsx"
 import Button from "@/web/components/Button.jsx"
 import { AxiosError } from "axios"
 import { api } from "@/web/components/AppContext.jsx"
-import { useRouter } from "next/router.js"
 import { validateName, validateEmail, validateMessage } from "@/validators.js"
 
 const initialValues = {
@@ -113,13 +112,6 @@ const Contact = () => {
               >
                 {received}
                 <div>
-                  {/* <label
-                    htmlFor="first-name"
-                    className="block text-sm font-medium text-gray-700"
-                  >
-                    Prénom
-                  </label> */}
-                  {/* add mt-1 to div below */}
                   <FormField
                     id="firstName-input"
                     type="text"
